@@ -1,0 +1,92 @@
+:root {
+  --dark-color: #000000;
+  --light-color: #e8f7fb;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Satoshi", sans-serif;
+  margin: 0;
+}
+
+.wrapper {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* Buttons */
+
+.btn {
+  border-radius: 62px;
+  text-decoration: none;
+  color: #fff;
+  padding: 16px 54px;
+  justify-content: center;
+  align-items: center;
+  display: inline-block;
+}
+
+.btn.dark {
+  background: var(--dark-color);
+}
+
+.btn.light {
+  background: var(--light-color);
+}
+
+/* Header */
+
+header {
+  background: #fff;
+  height: 100vh;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 1240px;
+  top: 0;
+  padding: 62px 24px 100px 100px;
+  z-index: 100;
+  transition: all 500ms ease;
+}
+
+nav .logo {
+  color: #000;
+  font-size: 32px;
+  font-style: bold;
+  font-weight: 900;
+  position: absolute;
+}
+
+nav ul {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  position: relative;
+  transform: translateX(40%);
+}
+
+nav ul li a {
+  color: #000;
+  font-size: 16px;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.sales-bar {
+  display: none;
+}
+
+.brands {
+  background: var(--dark-color);
+}
