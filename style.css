@@ -23,12 +23,13 @@ body {
 
 .btn {
   border-radius: 62px;
+  width: 210px;
   text-decoration: none;
   color: #fff;
   padding: 16px 54px;
-  justify-content: center;
   align-items: center;
   display: inline-block;
+  text-align: center;
 }
 
 .btn.dark {
@@ -54,9 +55,18 @@ nav {
   position: fixed;
   width: 1240px;
   top: 0;
-  padding: 62px 24px 100px 100px;
+  padding: 20px 24px;
   z-index: 100;
   transition: all 500ms ease;
+  margin-top: 24px;
+}
+
+nav.scrolled {
+  background: var(--dark-light);
+  box-shadow: 0 16px 5px -8px rgba(54, 52, 52, 0.3);
+  border-radius: 0 0 8px 8px;
+  top: 0;
+  padding: 12px;
 }
 
 nav .logo {
@@ -83,10 +93,102 @@ nav ul li a {
   text-decoration: none;
 }
 
+a:hover {
+  font-weight: 400;
+  text-decoration: underline;
+}
+
 .sales-bar {
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  padding: 9px 100px;
+  background: var(--dark-color);
+  color: var(--light-color);
+}
+
+.sales-bar p {
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.sales-bar a {
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.search form {
+  margin-left: 70px;
+  margin-top: 50px;
+  position: relative;
+}
+
+.search form input {
+  padding: 12px 70px;
+  border-radius: 62px;
+  width: 520px;
+  line-height: 200%;
+  border: none;
+  background: #f0f0f0;
+  transform: translateY(-50%);
+}
+
+.search form .submit-btn {
+  position: absolute;
+  left: 8px;
+  transform: translateY(-50%);
+  border-radius: 12px;
+  padding: 8px 16px;
+  border: 0;
+  cursor: pointer;
+}
+
+.hero-section {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 60px;
+  position: relative;
+  color: #fff;
+}
+
+.hero-section .left h1 {
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 125%;
+  margin-bottom: 0;
+  color: var(--dark-color);
+}
+
+.hero-section .left p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 200%;
+  margin-bottom: 30px;
+  width: 457px;
+  color: var(--dark-color);
 }
 
 .brands {
   background: var(--dark-color);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  padding: 32px 100px;
 }
