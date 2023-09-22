@@ -298,10 +298,72 @@ h2 {
   display: flex;
   justify-content: center;
   gap: 20px;
+  margin: 0;
+}
+
+.item-cards .img-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  background: #f0eeed;
+  padding: 10px 5px;
 }
 
 .item-cards .item-card {
   margin-top: 55px;
-  border-radius: 62px;
-  background: red;
+  width: 296px;
+}
+
+.item-cards .item-card h3 {
+  margin-top: 16px;
+  margin-bottom: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.item-cards .item-card .rating {
+  margin-top: 0;
+  display: flex;
+}
+
+.item-cards .item-card .score {
+  padding: 0px 20px;
+}
+
+.item-cards .item-card .price {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.item-cards .item-card .price p {
+  margin: 0;
+  color: var(--dark-color);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.item-cards .item-card .prev-price p {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration-line: line-through;
+}
+
+.item-cards .item-card .discount {
+  border-radius: 25px;
+  background: rgba(255, 51, 51, 0.1);
+  width: 58px;
+}
+
+.item-cards .item-card .discount p {
+  color: #f33;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 14px;
+  text-decoration: none;
+  text-align: center;
 }
