@@ -3,6 +3,11 @@
   --light-color: #e8f7fb;
 }
 
+@font-face {
+  font-family: Integral CF;
+  src: url("assets/fonts/integralcf-bold.otf");
+}
+
 *,
 *::after,
 *::before {
@@ -15,8 +20,9 @@ body {
 }
 
 .wrapper {
-  max-width: 1240px;
+  max-width: 1440px;
   margin: 0 auto;
+  position: relative;
 }
 
 /* Buttons */
@@ -44,7 +50,6 @@ body {
 
 header {
   background: #fff;
-  height: 100vh;
   width: 100%;
 }
 
@@ -53,28 +58,27 @@ nav {
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  width: 1240px;
+  width: 1440px;
   top: 0;
-  padding: 20px 24px;
-  z-index: 100;
-  transition: all 500ms ease;
-  margin-top: 24px;
+  padding: 20px 100px;
+  z-index: 10;
+  margin-top: 20px;
 }
 
 nav.scrolled {
-  background: var(--dark-light);
+  background: #fff;
   box-shadow: 0 16px 5px -8px rgba(54, 52, 52, 0.3);
-  border-radius: 0 0 8px 8px;
-  top: 0;
   padding: 12px;
+  margin: 0;
 }
 
 nav .logo {
+  font-family: "Integral CF", sans-serif;
   color: #000;
   font-size: 32px;
   font-style: bold;
-  font-weight: 900;
-  position: absolute;
+  font-weight: 700;
+  position: relative;
 }
 
 nav ul {
@@ -82,7 +86,7 @@ nav ul {
   gap: 24px;
   list-style: none;
   margin: 0;
-  position: relative;
+  position: absolute;
   transform: translateX(40%);
 }
 
@@ -102,7 +106,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 30px;
+  height: 38px;
   padding: 9px 100px;
   background: var(--dark-color);
   color: var(--light-color);
@@ -125,6 +129,15 @@ a:hover {
   text-decoration-line: underline;
 }
 
+.sales-bar span {
+  padding-left: 5px;
+}
+
+.sales-bar .close-icon {
+  position: absolute;
+  right: 100px;
+}
+
 .search {
   display: flex;
   align-items: center;
@@ -141,7 +154,7 @@ a:hover {
 .search form input {
   padding: 12px 70px;
   border-radius: 62px;
-  width: 520px;
+  width: 577px;
   line-height: 200%;
   border: none;
   background: #f0f0f0;
@@ -160,35 +173,135 @@ a:hover {
 
 .hero-section {
   display: flex;
-  height: 100vh;
   width: 100%;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 60px;
-  position: relative;
+  margin-top: 110px;
+  padding: 75px 100px;
   color: #fff;
+  background-image: url("images/hero-image.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 67% 50%;
+  position: relative;
+}
+
+.hero-section .left {
+  width: 100%;
 }
 
 .hero-section .left h1 {
-  font-size: 50px;
-  font-weight: 900;
-  line-height: 125%;
+  font-family: "Integral CF", sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 64px;
   margin-bottom: 0;
   color: var(--dark-color);
+  color: #000;
 }
 
 .hero-section .left p {
   font-size: 16px;
   font-weight: 400;
-  line-height: 200%;
-  margin-bottom: 30px;
-  width: 457px;
+  line-height: 22px;
+  margin-bottom: 32px;
+  margin-top: 32px;
+  width: 545px;
   color: var(--dark-color);
+}
+
+.hero-section .right {
+  position: relative;
+  width: 100%;
+}
+
+.hero-section .btn {
+  margin-bottom: 238px;
+}
+
+.hero-section .star-left {
+  position: absolute;
+  left: 10px;
+  top: 45%;
+}
+
+.hero-section .star-left img {
+  width: 56px;
+  height: 56px;
+}
+
+.hero-section .star-right {
+  position: absolute;
+  right: -40px;
+  top: 40px;
+}
+
+.hero-section .star-right img {
+  width: 104px;
+  height: 104px;
+}
+
+/* Punchline cards */
+
+.punchline-cards {
+  display: flex;
+  position: absolute;
+  left: 100px;
+  bottom: 160px;
+  gap: 50px;
+}
+
+.punchline-cards .content {
+  padding: 8px 8px;
+  position: relative;
+}
+
+.punchline-cards h3 {
+  margin: 0;
+  color: var(--dark-color);
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.punchline-cards p {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
 }
 
 .brands {
   background: var(--dark-color);
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  display: flex;
+  justify-content: space-around;
   padding: 32px 100px;
+  gap: 106px;
+}
+
+/* Section New Arrivals */
+
+section {
+  margin-top: 100px;
+}
+
+h2 {
+  color: var(--dark-color);
+  text-align: center;
+  font-family: "Integral CF", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.item-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.item-cards .item-card {
+  margin-top: 55px;
+  border-radius: 62px;
+  background: red;
 }
