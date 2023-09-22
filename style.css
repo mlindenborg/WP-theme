@@ -36,6 +36,7 @@ body {
   align-items: center;
   display: inline-block;
   text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .btn.dark {
@@ -43,7 +44,7 @@ body {
 }
 
 .btn.light {
-  background: var(--light-color);
+  color: #000;
 }
 
 /* Header */
@@ -366,4 +367,18 @@ h2 {
   padding: 6px 14px;
   text-decoration: none;
   text-align: center;
+}
+
+.new-arrivals .wrapper {
+  position: relative;
+}
+
+.new-arrivals .btn {
+  margin-top: 50px;
+  margin-left: auto;
+}
+
+hr.solid {
+  margin-top: 50px;
+  border-top: 1px solid #bbb;
 }
