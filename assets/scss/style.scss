@@ -1,11 +1,12 @@
 :root {
   --dark-color: #000000;
   --light-color: #e8f7fb;
+  --gray-color: #f0f0f0;
 }
 
 @font-face {
   font-family: Integral CF;
-  src: url("assets/fonts/integralcf-bold.otf");
+  src: url("../assets/fonts/integralcf-bold.otf");
 }
 
 *,
@@ -23,6 +24,22 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   position: relative;
+}
+
+.wrapper.dark {
+  margin-top: 80px;
+  padding: 36px 64px;
+  border-radius: 20px;
+  background: var(--dark-color);
+  max-width: 1240px;
+}
+
+.wrapper.gray {
+  padding-top: 50px;
+  margin-top: 200px;
+  border-radius: 40px;
+  background: var(--gray-color);
+  max-width: 1239px;
 }
 
 /* Buttons */
@@ -172,13 +189,15 @@ a:hover {
   cursor: pointer;
 }
 
+/* Hero Section */
+
 .hero-section {
   display: flex;
   width: 100%;
   margin-top: 110px;
   padding: 75px 100px;
   color: #fff;
-  background-image: url("images/hero-image.png");
+  background-image: url("../assets/images/hero-image.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 67% 50%;
@@ -294,6 +313,11 @@ h2 {
   font-weight: 700;
   line-height: normal;
 }
+h2.light {
+  margin: 0;
+  color: #fff;
+  font-size: 40px;
+}
 
 .item-cards {
   position: relative;
@@ -321,7 +345,6 @@ h2 {
   margin-bottom: 0;
   font-size: 20px;
   font-weight: 700;
-  line-height: normal;
 }
 
 .item-cards .item-card .rating {
@@ -384,17 +407,10 @@ hr.solid {
   border-top: 1px solid #bbb;
 }
 
-.wrapper-dress-style {
-  margin: auto;
-  padding-top: 50px;
-  margin-top: 200px;
-  border-radius: 40px;
-  background: #f0f0f0;
-  max-width: 1239px;
-}
+/* Dress style section */
 
 .style-cards {
-  padding: 10px 40px;
+  padding: 75px 64px;
   display: grid;
   grid-template-columns: 33.334% 33.334% 33.334%;
   gap: 12px;
@@ -441,5 +457,115 @@ hr.solid {
   font-size: 36px;
   font-weight: 700;
   z-index: 10;
-  padding: 16px 32px;
+  padding: 0px 32px;
+}
+
+/* Our cutomers testimonials */
+
+.our-customers h2 {
+  padding-left: 100px;
+  color: var(--dark-color);
+  text-align: left;
+  font-family: "Integral CF", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.testimonial-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 100px;
+  bottom: 160px;
+  gap: 20px;
+}
+
+.testimonial-cards .testimonial-card {
+  width: 400px;
+  height: 300px;
+  padding: 28px 32px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-cards .testimonial-card h3 {
+  color: #000;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.testimonial-cards .testimonial-card h3:after {
+  content: "";
+  display: inline-block;
+  background: url("../assets/images/check-icon.svg") no-repeat;
+  width: 30px;
+  height: 22px;
+  margin: 0 6px;
+}
+
+/* Newsletter */
+
+.newsletter-signup {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.newsletter-signup .left {
+  width: 50%;
+}
+
+.newsletter-signup .left h2 {
+  text-align: left;
+}
+
+.newsletter-signup .right {
+  margin-left: auto;
+}
+
+.newsletter-signup form {
+  position: relative;
+  margin-top: 30px;
+}
+
+.newsletter-signup form input {
+  width: 349px;
+  height: 48px;
+  font-size: 16px;
+  padding: 8px 60px 8px 52px;
+  border-radius: 62px;
+  background: #fff;
+  transform: translateY(-25%);
+}
+
+.newsletter-signup form img {
+  position: absolute;
+  left: 5%;
+}
+
+.newsletter-signup form .submit-btn {
+  display: flex;
+  width: 349px;
+  height: 48px;
+  margin-top: 24px;
+  padding: 12px 16px;
+  justify-content: center;
+  font-size: 16px;
+  gap: 12px;
+  border-radius: 62px;
+  background: #fff;
+  transform: translateY(-50%);
+}
+
+footer .logo {
+  color: #000;
+  font-family: "Integral CF", sans-serif;
+  font-size: 33.455px;
+  font-weight: 700;
+}
+footer p {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  font-weight: 400;
+  width: 248px;
 }
