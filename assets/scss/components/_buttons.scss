@@ -1,0 +1,19 @@
+/* Buttons */
+
+.btn {
+  border-radius: 62px;
+  width: 210px;
+  text-decoration: none;
+  color: #fff;
+  padding: 16px 54px;
+  align-items: center;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  &.dark {
+    background: var(--dark-color);
+  }
+  &.light {
+    color: #000;
+  }
+}

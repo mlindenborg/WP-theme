@@ -17,5 +17,8 @@
     "gulp-sass": "^5.1.0",
     "gulp-terser": "^2.1.0",
     "sass": "^1.69.4"
+  },
+  "devDependencies": {
+    "gulp-concat": "^2.6.1"
   }
 }

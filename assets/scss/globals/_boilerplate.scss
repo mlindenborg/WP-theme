@@ -1,0 +1,17 @@
+@use "../util" as u;
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: u.$font;
+  margin: 0 auto;
+}
+
+header {
+  background: #fff;
+  width: 100%;
+}

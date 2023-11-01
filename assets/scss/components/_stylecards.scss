@@ -1,0 +1,45 @@
+/* Dress style component */
+
+.style-cards {
+  padding: 75px 64px;
+  display: grid;
+  grid-template-columns: 33.334% 33.334% 33.334%;
+  gap: 12px;
+  justify-content: center;
+
+  &__style-card {
+    background: #fff;
+    border-radius: 20px;
+    & img-container {
+      width: 100%;
+      height: 100%;
+    }
+    & h3 {
+      position: absolute;
+      color: #000;
+      font-size: 36px;
+      font-weight: 700;
+      z-index: 5;
+      padding: 0px 32px;
+    }
+    &.one {
+      grid-column: 1 /2;
+    }
+    &.two {
+      grid-column: 2 /4;
+    }
+    &.three {
+      grid-column: 1 /3;
+    }
+    &.four {
+      grid-column: 3 /4;
+    }
+    & img {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+  }
+}

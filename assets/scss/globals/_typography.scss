@@ -1,0 +1,39 @@
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+section {
+  margin-top: 100px;
+}
+
+h2 {
+  color: var(--dark-color);
+  text-align: center;
+  font-family: "Integral CF", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  &.light {
+    margin: 0;
+    color: #fff;
+    font-size: 40px;
+  }
+}
