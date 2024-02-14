@@ -8,19 +8,23 @@ const gzip = require("gulp-gzip");
 
 // Sass Task
 function scssTask() {
-  return src("assets/scss/**/*.scss", { sourcemaps: true })
-    .pipe(sass())
-    .pipe(postcss([cssnano()]))
-    .pipe(gzip())
-    .pipe(dest("dist", { sourcemaps: "." }));
+  return (
+    src("assets/scss/**/*.scss", { sourcemaps: true })
+      .pipe(sass())
+      .pipe(postcss([cssnano()]))
+      //.pipe(gzip())
+      .pipe(dest("dist", { sourcemaps: "." }))
+  );
 }
 
 // JavaScript Task
 function jsTask() {
-  return src("assets/js/**/*.js", { sourcemaps: true })
-    .pipe(terser())
-    .pipe(gzip())
-    .pipe(dest("dist", { sourcemaps: "." }));
+  return (
+    src("assets/js/**/*.js", { sourcemaps: true })
+      .pipe(terser())
+      //.pipe(gzip())
+      .pipe(dest("dist", { sourcemaps: "." }))
+  );
 }
 
 // Browsersync Tasks

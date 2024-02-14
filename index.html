@@ -9,7 +9,7 @@
       href="https://api.fontshare.com/v2/css?f[]=satoshi@1,900,700,500,300,400&display=swap"
       rel="stylesheet"
     /> -->
-    <link rel="stylesheet" href="dist/style.css" />
+
     <link
       rel="preload"
       fetchpriority="high"
@@ -19,6 +19,7 @@
     />
   </head>
   <body>
+    <link rel="stylesheet" href="dist/style.css" />
     <header>
       <div class="wrapper">
         <div class="wrapper__sales-bar">
@@ -28,8 +29,8 @@
             <img
               src="assets/images/close-icon.svg"
               alt="close"
-              width="28px"
-              height="28px"
+              width="18px"
+              height="18px"
             />
           </div>
         </div>
@@ -57,7 +58,11 @@
           </ul>
           <div class="search">
             <form action="#">
-              <input type="text" placeholder="Search for products..." />
+              <input
+                type="text"
+                placeholder="Search for products..."
+                aria-label="productsearch"
+              />
               <button class="submit-btn">
                 <img
                   src="assets/images/search-icon.svg"
@@ -232,7 +237,7 @@
                 />
                 <img
                   src="assets/images/rating-half-icon.svg"
-                  alt=""
+                  alt="rating"
                   width=" 8.792px"
                   height="16.724px"
                 />
@@ -275,7 +280,7 @@
                 />
                 <img
                   src="assets/images/rating-half-icon.svg"
-                  alt=""
+                  alt="rating"
                   width=" 8.792px"
                   height="16.724px"
                 />
@@ -330,7 +335,7 @@
                 />
                 <img
                   src="assets/images/rating-half-icon.svg"
-                  alt=""
+                  alt="rating"
                   width=" 8.792px"
                   height="16.724px"
                 />
@@ -379,7 +384,7 @@
                 />
                 <img
                   src="assets/images/rating-half-icon.svg"
-                  alt=""
+                  alt="rating"
                   width=" 8.792px"
                   height="16.724px"
                 />
@@ -580,7 +585,7 @@
                 />
                 <img
                   src="assets/images/rating-half-icon.svg"
-                  alt=""
+                  alt="rating"
                   width=" 8.792px"
                   height="16.724px"
                 />
@@ -768,8 +773,12 @@
           </div>
           <div class="newsletter-signup__right">
             <form action="#">
-              <input type="text" placeholder="Enter your email address" />
-              <img src="assets/images/email-icon.svg" alt="" />
+              <input
+                type="text"
+                placeholder="Enter your email address"
+                aria-label="newsletter_signup"
+              />
+              <img src="assets/images/email-icon.svg" alt="e-mail" />
               <br />
               <button class="submit-btn">Subscribe to Newsletter</button>
             </form>
@@ -799,6 +808,6 @@
         </div>
       </div>
     </footer>
-    <script src="dist/main.js"></script>
+    <script src="dist/main.js" defer></script>
   </body>
 </html>
